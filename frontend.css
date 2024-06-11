@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic Survival Prediction</title>
+    <link rel="stylesheet" href="frontend.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #2b5876, #4e4376);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        input, select, button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+        }
+        button {
+            background: #6c63ff;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #574bff;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Titanic Survival Prediction</h1>
+        <form id="predictionForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="pclass">Passenger Class (Pclass):</label>
+            <select id="pclass" name="pclass" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+
+            <button type="submit">Predict Survival</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="frontend.js"></script>
+</body>
+</html>
